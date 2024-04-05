@@ -61,6 +61,9 @@ layout: compress
                 ></a>
             </div>
         </footer>
+        <footer class="footer-extra">
+            <p>Copyleft (C) {{ site.time | date: '%Y' }}</p>
+        </footer>
     </body>
 
     <script src="{{ site.url }}{{ site.baseurl }}/assets/js/theme-switcher.js"></script>
@@ -68,7 +71,7 @@ layout: compress
     {% if page.url == '/' %}
     <script src="{{ site.url }}{{ site.baseurl }}/assets/js/simple-jekyll-search.js"></script>
     <script>
-        var sjs = SimpleJekyllSearch({
+        const sjs = SimpleJekyllSearch({
             searchInput: document.getElementById("search-input"),
             resultsContainer: document.getElementById("search-results"),
             json: "{{ site.url }}{{ site.baseurl }}/search.json",

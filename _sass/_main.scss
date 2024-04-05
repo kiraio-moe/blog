@@ -155,6 +155,20 @@ body {
     color: var(--main-text-color);
 }
 
+#intro {
+    & .site-title {
+        margin-bottom: -0.5rem;
+
+        & a {
+            color: var(--main-text-color);
+        }
+    }
+
+    & .bio {
+        margin: 0;
+    }
+}
+
 a {
     color: var(--link-color);
     text-decoration: none;
@@ -299,6 +313,19 @@ b {
     margin-bottom: 0.5rem;
 }
 
+.posts {
+    margin: 0;
+
+    & .post-list {
+        padding: 0;
+    }
+
+    & .pagination ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
 .posts > h3 {
     font-weight: 500;
 }
@@ -384,6 +411,15 @@ main {
                 transition: color 0.3s ease-in;
             }
         }
+    }
+}
+
+.footer-extra {
+    display: flex;
+    justify-content: center;
+
+    p {
+        color: var(--very-light-text-color);
     }
 }
 
