@@ -46,6 +46,7 @@ exclude:
   - LICENSE.md
   - README.md
   - CONTRIBUTING.md
+  - scripts/
 
 compress_html:
   clippings: all

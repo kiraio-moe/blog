@@ -4,9 +4,9 @@ name: Jekyll site CI
 on:
   workflow_dispatch:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 permissions:
   contents: write
@@ -18,14 +18,14 @@ jobs:
     - uses: actions/checkout@v2
 
     # Build
-    - name: 👷 Build the site in the jekyll container 
+    - name: 👷 Build the site in the jekyll container
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll \
         -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll &&\
         jekyll build --future -d build"
-    
+
     # Deploy to gh-pages branch
     - name: 🚀 Deploy to Github Pages
       uses: JamesIves/github-pages-deploy-action@4.1.4
