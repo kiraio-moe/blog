@@ -6,5 +6,4 @@
 set -e
 
 echo "Live previewing your site..."
-rm -rf ../public
 bundle exec jekyll s -l -w --config _config.yml
