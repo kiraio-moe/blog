@@ -15,7 +15,7 @@ group :jekyll_plugins do
     gem "jekyll-relative-links"
     gem "webrick"
     gem "sass-embedded", "~> 1.69.5"
-    gem "google-protobuf", "~> 3.24.4"
+    gem "google-protobuf", "~> 3.25.5"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
